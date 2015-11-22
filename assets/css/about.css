@@ -1,0 +1,19 @@
+#about {
+    width: 560px;
+    position: relative;
+    margin: auto;
+    line-height: 18px;
+}
+#about .h1{
+    font-family:Microsoft Yahei, Segoe UI, Arial;
+    font-size:14px;
+    color:#555555;
+}
+#about .h2{
+    font-family:Microsoft Yahei, Segoe UI, Arial;
+    font-size:14px;
+    color:#666666;
+}
+#about .about-p{
+    margin-bottom: 12px;
+}
