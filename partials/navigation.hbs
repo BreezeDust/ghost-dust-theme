@@ -3,12 +3,15 @@
     <a href="#" class="nav-close">
         <span class="hidden">关闭</span>
     </a>
-    <ul>
+    <ul class="nav-item-group">
         {{#foreach navigation}}
             <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a
                     href="{{url absolute="true"}}">{{label}}</a></li>
         {{/foreach}}
     </ul>
+    <h3 class="nav-title-tags">分类</h3>
+    {{tag_cloud limit=10}}
+
     <script type="text/javascript">
         // TODO 临时性修复自定义navigation获取不到url数据问题
         var NAVIGATION_MAP = new Array();
