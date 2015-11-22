@@ -1,0 +1,21 @@
+<div class="nav">
+    <h3 class="nav-title">菜单</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">关闭</span>
+    </a>
+    <ul>
+        {{#foreach navigation}}
+            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a
+                    href="{{url absolute="true"}}">{{label}}</a></li>
+        {{/foreach}}
+    </ul>
+    <script type="text/javascript">
+        // TODO 临时性修复自定义navigation获取不到url数据问题
+        var NAVIGATION_MAP = new Array();
+            {{#foreach navigation}}
+            NAVIGATION_MAP["{{label}}"] = "{{url absolute="true"}}";
+            {{/foreach}}
+    </script>
+    <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">订阅</a>
+</div>
+<span class="nav-cover"></span>

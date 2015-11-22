@@ -1,0 +1,40 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+
+    <header class="main-header">
+        <div id="header-bg"></div>
+        <nav class="main-nav overlay clearfix">
+            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+            {{#if @blog.navigation}}
+                <a class="menu-button icon-menu" href="#"><span class="word">菜单</span></a>
+            {{/if}}
+        </nav>
+        <div class="vertical"  id="canShowNavigation">
+            <div class="main-header-content inner">
+                <h1 class="page-title">{{@blog.title}}</h1>
+                <h2 class="page-description">{{@blog.description}}</h2>
+            </div>
+            {{> "navigation_circle"}}
+        </div>
+        <!--<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">下拉显示</span></a>-->
+    </header>
+
+    <main class="content" role="main">
+        <article class="{{post_class}}">
+
+            <!--<header class="post-header">-->
+                <!--<h1 class="post-title">{{title}}</h1>-->
+            <!--</header>-->
+
+            <section class="post-content">
+                {{content}}
+            </section>
+
+        </article>
+    </main>
+{{/post}}

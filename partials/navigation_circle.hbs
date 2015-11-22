@@ -1,0 +1,7 @@
+<div class="nav-circle" id="nav-circle-id">
+    <div class="nav-circle-group">
+        {{#foreach @blog.navigation}}
+            <div class="nav-circle-group-item" onclick="navigation(NAVIGATION_MAP['{{label}}'])">{{label}}</div>
+        {{/foreach}}
+    </div>
+</div>
