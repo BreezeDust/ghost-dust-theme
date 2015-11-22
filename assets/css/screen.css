@@ -2130,3 +2130,7 @@ navigation_circle
     color: rgba(255,255,255,0.2);
     margin-left: 5px;
 }
+
+.tag-cloud .tag-item .post-count{
+    display: none;
+}
