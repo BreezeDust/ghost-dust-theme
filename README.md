@@ -14,6 +14,7 @@
 + 增加`highlight`代码高亮
 + 细调`MarkDown`样式
 + 新增菜单栏标签导航
+
 # DISQUS
 请在`partials/comments.hbs`中添加自己的DISQUS链接
 # 问题
